@@ -15,7 +15,7 @@ services:
 
   pgadmin:
     container_name: pgadmin4
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4:6.9
     restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
@@ -25,7 +25,7 @@ services:
       
   redis:
     image: redis:latest
-    container_name: redis
+    container_name: redis:bullseye
     restart: always
     ports:
       - 6379:6379

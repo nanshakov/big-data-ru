@@ -1,9 +1,9 @@
 version: '3.7'
 services:
   arangodb_db_container:
-    image: arangodb:latest
+    image: arangodb:3.9.1
     environment:
-      ARANGO_ROOT_PASSWORD: 1
+      ARANGO_ROOT_PASSWORD: root
     ports:
       - 8529:8529
     volumes:
@@ -11,5 +11,5 @@ services:
       - arangodb_apps_data_container:/var/lib/arangodb3-apps
 
 volumes:
-  arangodb_data_container:
-  arangodb_apps_data_container:
+  arangodb_data_container: ./arango-data/
+  arangodb_apps_data_container: ./arango-apps/
